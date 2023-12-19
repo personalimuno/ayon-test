@@ -42,11 +42,11 @@ services:
       timeout: 2s
       retries: 3
 
-    depends_on:
-      postgres:
-        condition: service_started
-      redis:
-        condition: service_started
+    # depends_on:
+    #   postgres:
+    #     condition: service_started
+    #   redis:
+    #     condition: service_started
 
     expose: [5000]
     ports: ["5000:5000"]
