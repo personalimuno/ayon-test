@@ -14,7 +14,7 @@ services:
 
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
-      - "db:/var/lib/postgresql/data"
+      - "/root/ayon/db:/var/lib/postgresql/data"
 
     environment:
       - "POSTGRES_USER=ayon"
@@ -52,14 +52,14 @@ services:
     ports: ["5000:5000"]
 
     volumes:
-      - "./addons:/addons"
-      - "./storage:/storage"
+      - "/root/ayon/addons:/addons"
+      - "/root/ayon/storage:/storage"
       
       # comment out the following line on Windows
       - "/etc/localtime:/etc/localtime:ro"
       
       # uncomment the following line if you need to work on the backend code
-      # - "./backend:/backend"
+      # - "/root/ayon/backend:/backend"
 
 
 volumes:
