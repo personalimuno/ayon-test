@@ -47,6 +47,9 @@ services:
     #     condition: service_started
     #   redis:
     #     condition: service_started
+    depends_on:
+      - postgres
+      - redis
 
     expose: [5000]
     ports: ["5000:5000"]
